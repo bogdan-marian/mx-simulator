@@ -8,3 +8,6 @@ this make targets work
   - wallet.pem
   - script.sh modified to only start adder.py
   - adder.py modified to only use fiels in the current directory
+
+# run-java-local-adder-example
+Lets try to build this target that does the same thing that adder.py does but in java
