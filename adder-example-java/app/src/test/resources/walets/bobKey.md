@@ -28,5 +28,8 @@
 # address
 `erd1mpru9s8ulkawkltvxppna3gg3cpnz5lh4rup6dxgpje8ya7sv9yqwkcgn8`
 
+# mnemonic
+`ball fly later tired weasel genre siege media accident hundred convince fun digital wait glass speed problem kick sweet priority job bunker over coast`
+
 # password
 `1!Password1`
