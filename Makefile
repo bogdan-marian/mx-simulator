@@ -55,6 +55,8 @@ run-repo-examples: setup-env
 
 run-local-adder-example: setup-env
 	$(MAKE) docker-build
+	# sometimes you need to run this before
+	# chmod -R u+w /home/bogdan/.simulatorPipEnv
 	docker stop "${IMAGE_NAME}" || true
 	docker rm "${IMAGE_NAME}" || true
 	docker run -d --name "${IMAGE_NAME}" -p 8085:8085 ${CHAIN_SIMULATOR_IMAGE_NAME}:${CHAIN_SIMULATOR_IMAGE_TAG}
