@@ -47,7 +47,7 @@ public class BroadcastTest {
             assertEquals("chain", transaction.getChainID());
             assertEquals(1000000000, transaction.getGasPrice());
 
-            Address addressOfBob = Address.fromBech32("erd1cux02zersde0l7hhklzhywcxk4u9n4py5tdxyx7vrvhnza2r4gmq4vw35r");
+            Address addressOfBob = Address.fromBech32("erd1mpru9s8ulkawkltvxppna3gg3cpnz5lh4rup6dxgpje8ya7sv9yqwkcgn8");
 
             transaction.setNonce(alice.getNonce());
             transaction.setSender(aliceAddress);
