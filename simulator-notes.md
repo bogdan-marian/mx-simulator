@@ -4,6 +4,8 @@ simulator adder: https://github.com/multiversx/mx-chain-simulator-go/blob/main/e
 github yaml: https://github.com/multiversx/mx-chain-simulator-go/blob/main/.github/workflows/run-examples.yml
 github actions: https://github.com/multiversx/mx-chain-simulator-go/blob/main/Makefile
 
+youtube: https://youtu.be/S7iuA7DjiwA?feature=shared&t=364
+
 ```bash
 git clone git@github.com:multiversx/mx-chain-simulator-go.git
 cd mx-chain-simulator-go
