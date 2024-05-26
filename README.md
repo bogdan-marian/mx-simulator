@@ -20,7 +20,7 @@ local folder adder-example is a copy of adder-example of skd simulator repo but 
   - adder.py modified to only use fiels in the current directory
 
 ## make run-java-broadcast-test
-This will run the java broadcast test. 
+This will run the java broadcast test. Run this on a machine that has jdk 17 o higher configured since the scripts to not configure it for you 
 
 ## make docker-run
 This is useful for debugging. 
