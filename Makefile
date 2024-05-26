@@ -64,3 +64,17 @@ run-local-adder-example: setup-env
 	. ${PIP_ENV_DIR}/bin/activate && pip install -r ${REPO_TEMP_DIR}/examples/requirements.txt && cd $(CURDIR)/adder-example && /bin/bash script.sh
 	docker stop "${IMAGE_NAME}"
 	docker rm "${IMAGE_NAME}"
+
+run-java-broadcast-test: setup-env
+	$(MAKE) docker-build
+	# sometimes you need to run this before
+	# chmod -R u+w /home/bogdan/.simulatorPipEnv
+	docker stop "${IMAGE_NAME}" || true
+	docker rm "${IMAGE_NAME}" || true
+	docker run -d --name "${IMAGE_NAME}" -p 8085:8085 ${CHAIN_SIMULATOR_IMAGE_NAME}:${CHAIN_SIMULATOR_IMAGE_TAG}
+	echo "Waiting for simulator to start"
+	cd $(CURDIR)/adder-example-java && ./waitSimulatorToStart.sh
+	echo "Running Java BroadcastTest"
+	cd $(CURDIR)/adder-example-java && ./gradlew test --tests "adder.example.BroadcastTest.sendTransactions"
+	docker stop "${IMAGE_NAME}"
+	docker rm "${IMAGE_NAME}"

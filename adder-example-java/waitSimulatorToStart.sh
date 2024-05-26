@@ -26,5 +26,4 @@ wait_simulator_to_start() {
 
 wait_simulator_to_start
 
-# Run the adder example
-python3 adder.py
+

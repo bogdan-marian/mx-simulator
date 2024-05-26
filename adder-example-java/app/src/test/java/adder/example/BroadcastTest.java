@@ -27,6 +27,7 @@ public class BroadcastTest {
 
     @Test
     public void sendTransactions() throws Exception {
+        System.out.println("Start sendTransactions");
         // this test doesn't use mock http server because it is a very good example of for transactions can be sent to the chain
         NetworkConfig.getDefault().sync(this.provider);
         String aliceBench32 = "erd1w30a66fzeg9t9q8prlscetkvc03rsk76mcvz7crkap6pq6a8ehrqgekyl3";
@@ -57,7 +58,10 @@ public class BroadcastTest {
 
             assertEquals(64, transaction.getTxHash().length());
             alice.incrementNonce();
+            System.out.println("Count i = " + i);
         }
+
+        System.out.println("End sendTransactions");
     }
 
     public void sendFundsTest(String bench32) throws Exceptions.AddressException, IOException {
