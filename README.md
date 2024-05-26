@@ -7,9 +7,6 @@ stuff to happen
 
 # make flow
 
-## make docker-build
-Run this once before any other task
-
 ## make run-repo-examples 
 this one clones the mx-chain-simulator-go and runs all the run-examples in the respectiv repo
 
@@ -26,4 +23,7 @@ This will run the java broadcast test. Run this on a machine that has jdk 17 o h
 This is useful for debugging. 
 You can also run the emulator and keep it running so you can connect to with with any 
 language you want. I use java but you can use any other. 
+
+## make docker-stop
+shuts down multiversx/chainsimulator
 
